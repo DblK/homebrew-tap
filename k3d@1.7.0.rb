@@ -2,15 +2,8 @@ class K3dAT170 < Formula
   desc "Little helper to run Rancher Lab's k3s in Docker"
   homepage "https://github.com/rancher/k3d"
   url "https://github.com/rancher/k3d/archive/v1.7.0.tar.gz"
-  sha256 "939fae09600ae7edb5e92ecab5c25ac2adec5be432c8a7ee34a14e01a0245b11"
+  sha256 "e741809eb27f707c0f22c19a41ebbd6be7c20ec275285bb12bbf437a675aafb7"
   license "MIT"
-
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "1363893ef0fefaa579ea21f1dd546d2d88b44316e2df7746e31a0732aa1beb81" => :catalina
-    sha256 "51e0a32d8d8ddba6386c5243e3a3a22a730020769d30962e2778c586da8088da" => :mojave
-    sha256 "2958a2c668ebe0d064610e680898e895ede437775b2f7fa225a30ee5c9aa3ae5" => :high_sierra
-  end
 
   depends_on "go" => :build
 
