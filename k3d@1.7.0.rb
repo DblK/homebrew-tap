@@ -1,4 +1,4 @@
-class K3d < Formula
+class K3dAT170 < Formula
   desc "Little helper to run Rancher Lab's k3s in Docker"
   homepage "https://github.com/rancher/k3d"
   url "https://github.com/rancher/k3d/archive/v1.7.0.tar.gz"
