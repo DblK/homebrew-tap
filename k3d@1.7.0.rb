@@ -10,7 +10,7 @@ class K3dAT170 < Formula
   def install
     system "go", "build",
            "-mod", "vendor",
-           "-ldflags", "-s -w -X github.com/rancher/k3d/v1.7.0/version.Version=v#{version}"\
+           "-ldflags", "-s -w -X github.com/rancher/k3d/v1.7.0/version.Version=v1.7.0"\
            " -X github.com/rancher/k3d/v1.7.0/version.K3sVersion=latest",
            "-trimpath", "-o", bin/"k3d"
     prefix.install_metafiles
