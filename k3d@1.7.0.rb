@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class K3dAT170 < Formula
   desc "Little helper to run Rancher Lab's k3s in Docker"
   homepage "https://github.com/rancher/k3d"
@@ -7,10 +10,9 @@ class K3dAT170 < Formula
   revision 1
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "3c1dd20b30c4a51347c2c01a5dc4346e4aa4ffc9162cb9f187df43d333192c28" => :catalina
-    sha256 "0039236f61e40518ebfc684b45a5f13aa3ac9c6da15128b7a67fb020961e1605" => :mojave
-    sha256 "3e63ce46a496a7fe264aa10583115f4fa5e51eaa04020ffbe1c73962fe55b755" => :high_sierra
+    sha256 cellar: :any_skip_relocation, catalina:    "3c1dd20b30c4a51347c2c01a5dc4346e4aa4ffc9162cb9f187df43d333192c28"
+    sha256 cellar: :any_skip_relocation, mojave:      "0039236f61e40518ebfc684b45a5f13aa3ac9c6da15128b7a67fb020961e1605"
+    sha256 cellar: :any_skip_relocation, high_sierra: "3e63ce46a496a7fe264aa10583115f4fa5e51eaa04020ffbe1c73962fe55b755"
   end
 
   depends_on "go" => :build

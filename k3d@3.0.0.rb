@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class K3dAT300 < Formula
   desc "Little helper to run Rancher Lab's k3s in Docker"
   homepage "https://github.com/rancher/k3d"
@@ -6,10 +9,9 @@ class K3dAT300 < Formula
   license "MIT"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "1363893ef0fefaa579ea21f1dd546d2d88b44316e2df7746e31a0732aa1beb81" => :catalina
-    sha256 "51e0a32d8d8ddba6386c5243e3a3a22a730020769d30962e2778c586da8088da" => :mojave
-    sha256 "2958a2c668ebe0d064610e680898e895ede437775b2f7fa225a30ee5c9aa3ae5" => :high_sierra
+    sha256 cellar: :any_skip_relocation, catalina:    "1363893ef0fefaa579ea21f1dd546d2d88b44316e2df7746e31a0732aa1beb81"
+    sha256 cellar: :any_skip_relocation, mojave:      "51e0a32d8d8ddba6386c5243e3a3a22a730020769d30962e2778c586da8088da"
+    sha256 cellar: :any_skip_relocation, high_sierra: "2958a2c668ebe0d064610e680898e895ede437775b2f7fa225a30ee5c9aa3ae5"
   end
 
   depends_on "go" => :build
@@ -30,6 +32,6 @@ class K3dAT300 < Formula
     # (which is the md5sum of 'homebrew-failing-test')
     output = shell_output("#{bin}/k3d cluster get 6d6de430dbd8080d690758a4b5d57c86 2>&1", 1).split("\n").pop
     assert_match output,
-      "\x1B\[31mFATA\x1B\[0m\[0000\]\ No\ nodes\ found\ for\ cluster\ '6d6de430dbd8080d690758a4b5d57c86'\ "
+                 "\x1B\[31mFATA\x1B\[0m\[0000\]\ No\ nodes\ found\ for\ cluster\ '6d6de430dbd8080d690758a4b5d57c86'\ "
   end
 end
